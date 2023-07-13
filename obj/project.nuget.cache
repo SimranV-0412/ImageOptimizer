@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JZFkQ+t4HjlF8Yzwc+Qufj751jYlDvh5YCJGqcyrFRl7GJ6ZXVNT7UDeCthKECnRhR2i8cibKpcYMbDp7FyRcQ==",
+  "success": true,
+  "projectFilePath": "D:\\Image_optimizer\\Image_optimizer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simranv\\.nuget\\packages\\magick.net-q16-anycpu\\13.1.3\\magick.net-q16-anycpu.13.1.3.nupkg.sha512",
+    "C:\\Users\\simranv\\.nuget\\packages\\magick.net.core\\13.1.3\\magick.net.core.13.1.3.nupkg.sha512",
+    "C:\\Users\\simranv\\.nuget\\packages\\sixlabors.imagesharp\\3.0.1\\sixlabors.imagesharp.3.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

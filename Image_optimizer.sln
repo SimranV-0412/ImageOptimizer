@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Image_optimizer", "Image_optimizer.csproj", "{BC6067A2-7F3B-4B75-AA5D-118E13F18461}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ImageOptimizerApp", "..\ImageOptimizerApp\ImageOptimizerApp.vdproj", "{76F8E35B-AAE1-4470-96A0-DF249936B3D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC6067A2-7F3B-4B75-AA5D-118E13F18461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6067A2-7F3B-4B75-AA5D-118E13F18461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6067A2-7F3B-4B75-AA5D-118E13F18461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6067A2-7F3B-4B75-AA5D-118E13F18461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F8E35B-AAE1-4470-96A0-DF249936B3D7}.Debug|Any CPU.ActiveCfg = Debug
+		{76F8E35B-AAE1-4470-96A0-DF249936B3D7}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C29D499F-9FF2-4B95-AF7C-DB350C3B5E81}
+	EndGlobalSection
+EndGlobal
