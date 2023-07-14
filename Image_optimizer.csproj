@@ -6,11 +6,11 @@
     <Nullable>enable</Nullable>
 	  <UseWPF>true</UseWPF>
 	  <UseWindowsForms>true</UseWindowsForms>
-	  <ApplicationIcon>img.ico</ApplicationIcon>
+	  <ApplicationIcon>imgIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="img.ico" />
+    <Content Include="imgIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
