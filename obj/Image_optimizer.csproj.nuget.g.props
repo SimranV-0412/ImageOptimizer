@@ -12,7 +12,4 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\simranv\.nuget\packages\" />
   </ItemGroup>
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)sixlabors.imagesharp\3.0.1\build\SixLabors.ImageSharp.props" Condition="Exists('$(NuGetPackageRoot)sixlabors.imagesharp\3.0.1\build\SixLabors.ImageSharp.props')" />
-  </ImportGroup>
 </Project>

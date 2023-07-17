@@ -41,6 +41,7 @@ namespace Image_optimizer
                 }
             }
         }
+
         private async void ButtonOptimize_ClickAsync(object sender, RoutedEventArgs e)
         {
             string directoryPath = SelectedDirectoryTextBox.Text;
@@ -48,6 +49,13 @@ namespace Image_optimizer
 
             totalImages = directories.Sum(directory => Directory.EnumerateFiles(directory, "*.*", SearchOption.TopDirectoryOnly)
                 .Count(file => file.ToLower().EndsWith(".jpg") || file.ToLower().EndsWith(".jpeg") || file.ToLower().EndsWith(".png")));
+
+            // Process image files directly from the selected directory
+            string[] filesInSelectedDirectory = Directory.EnumerateFiles(directoryPath, "*.*", SearchOption.TopDirectoryOnly)
+                .Where(file => file.ToLower().EndsWith(".jpg") || file.ToLower().EndsWith(".jpeg") || file.ToLower().EndsWith(".png"))
+                .ToArray();
+
+            totalImages += filesInSelectedDirectory.Length;
 
             await System.Windows.Application.Current.Dispatcher.InvokeAsync(() =>
             {
@@ -67,6 +75,12 @@ namespace Image_optimizer
             const int batchSize = 100; // Set the batch size as per your system's capability
 
             ConcurrentBag<string> imageFiles = new ConcurrentBag<string>();
+
+            // Add files from the selected directory to the imageFiles bag
+            foreach (string file in filesInSelectedDirectory)
+            {
+                imageFiles.Add(file);
+            }
 
             foreach (string directory in directories)
             {
@@ -211,6 +225,7 @@ namespace Image_optimizer
                 ImageListTextBox.Visibility = Visibility.Visible;
             });
         }
+
         private void ButtonPause_Click(object sender, RoutedEventArgs e)
         {
             // Store the current progress before pausing
@@ -247,8 +262,6 @@ namespace Image_optimizer
             ButtonOptimize_ClickAsync(sender, e);
         }
 
-
-
         private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
@@ -273,7 +286,5 @@ namespace Image_optimizer
             ProgressLabel.Content = string.Empty;
             ImageNameLabel.Content = string.Empty;
         }
-
     }
 }
-
